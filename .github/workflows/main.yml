@@ -23,7 +23,7 @@ jobs:
         secrets_get=(example1 example2)
         for secret_get in ${secrets_get[@]}
         do
-          value=$(az keyvault secret show --name $secret_get --vault-name tamopskvexample --query value --output tsv)
+          value=$(az keyvault secret show --name $secret_get --vault-name tamopskvexample01 --query value --output tsv)
           echo "::add-mask::$value"
           echo "$secret_get=$value" >> $GITHUB_OUTPUT
         done
