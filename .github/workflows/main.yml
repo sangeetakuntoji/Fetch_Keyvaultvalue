@@ -1,14 +1,13 @@
- name: github_action_azure_kv_secrets
- 
- on:
-  workflow_dispatch:
+name: github_action_azure_kv_secrets
+on:
+  push:
+    branches: [ main ]
  
 jobs:
-  docker_build_push_acr:
-    name: 'GitHub Action to retreive secrets from Azure Key Vault and deploy exam
-  runs-on: ubuntu-18.04
-    environment: production
-   
+   docker_build_push_acr:
+    name: 'GitHub Action to retreive secrets from Azure Key Vault and deploy'
+    runs-on: ubuntu-latest
+    
     steps:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
