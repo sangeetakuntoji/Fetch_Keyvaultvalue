@@ -5,7 +5,7 @@ on:
  
 jobs:
    docker_build_push_acr:
-    name: 'GitHub Action to retreive secrets from Azure Key Vault and deploy'
+    name: 'GitHub Action to retreive secrets from Azure Key Vault and deploy '
     runs-on: ubuntu-latest
     
     steps:
